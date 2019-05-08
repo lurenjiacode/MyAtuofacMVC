@@ -1,0 +1,52 @@
+﻿@model MyAuto.Entity.BlogArticle
+@{
+    ViewBag.Title = "ShowBlog";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/Scripts/highlight/styles/dark.css">
+    <style type="text/css">
+        .cke_widget_drag_handler_container {
+            display: none !important;
+            background-repeat: no-repeat !important;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+        }
+
+        .cke_reset cke_widget_mask img {
+            display: none !important;
+        }
+
+        .cke_widget_wrapper {
+            position: relative;
+        }
+    </style>
+}
+@section scripts{
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/ckeditor/config.js"></script>
+    <script src="~/Scripts/Blog/Show.js"></script>
+    <script src="~/Scripts/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+}
+
+
+<div class="container">
+    <div style="display:none">
+        <input id="aaasdwesqeqwaaa">@ViewBag.BlogTitle</input>
+    </div>
+
+    <h1 class="text-center">@ViewBag.BlogTitle</h1>
+    <h2 class="text-center">@ViewBag.BlogCreator</h2>
+    <p class="text-center">作者：@ViewBag.BlogKeywords &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创建时间：@ViewBag.BlogCreateTime</p>
+    <p></p>
+    <blockquote class="blockquote">
+        <div id="blogcontent">
+        </div>
+        <footer class="blockquote-footer">From : @ViewBag.BlogCreator</footer>
+    </blockquote>
+</div>
+
+<script type="text/javascript">
+    var blogid = "@ViewBag.BlogID";
+</script>

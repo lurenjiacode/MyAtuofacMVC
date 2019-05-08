@@ -1,0 +1,50 @@
+﻿@model X.PagedList.IPagedList<MyAuto.Entity.Movie>
+@using X.PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.Message</h2>
+<h2>@ViewBag.Hellotime</h2>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>
+                名称
+            </th>
+            <th>
+                主演
+            </th>
+            <th>
+                分类
+            </th>
+            <th>
+                时间
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.RouteUrl("Play", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.MovName)</a>
+                </td>
+                <td>
+                    <a href="@Url.RouteUrl("Play", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.Performer)</a>
+                </td>
+                <td>
+                    <a href="@Url.RouteUrl("Play", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.Classify)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieCreateTime)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    每页 @Model.PageSize 条记录，共 @Model.TotalItemCount 条，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+    @Html.PagedListPager(Model, page => Url.RouteUrl("Movie", new { pageindexa = page }))
+</div>

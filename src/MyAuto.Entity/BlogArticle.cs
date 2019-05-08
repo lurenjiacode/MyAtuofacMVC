@@ -12,7 +12,7 @@ namespace MyAuto.Entity
         public string Title { get; set; }
         public string Keywords { get; set; }
         public string Creator { get; set; }
-        public string Content { get; set; }
+        public string BlogContent { get; set; }
         public DateTime BlogCreateTime { get; set; }
     }
 }

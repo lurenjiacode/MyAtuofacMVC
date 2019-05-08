@@ -1,0 +1,31 @@
+﻿@model MyAuto.Entity.BlogArticle
+@{
+    ViewBag.Title = "Add";
+}
+
+@section scripts{
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/ckeditor/config.js"></script>
+    <script src="~/Scripts/Blog/Add.js"></script>
+    <script src="~/Scripts/jquery.base64.js"></script>
+}
+<h2>Add</h2>
+
+<div class="form-group">
+    <label for="name">题目</label>
+    <input type="text" class="form-control" id="title" placeholder="请输入名称">
+</div>
+<div class="form-group">
+    <label for="name">作者</label>
+    <input type="text" class="form-control" id="creator" placeholder="请输入名称">
+</div>
+<div class="form-group">
+    <label for="name">关键词</label>
+    <input type="text" class="form-control" id="keywords" placeholder="请输入名称">
+</div>
+
+<textarea class="ckeditor" id="blogContent" style="min-width: 90%">输入</textarea>
+
+
+<button type="button" class="btn btn-primary" onclick=ass()>确定</button>
+<button type="button" class="btn btn-primary">取消</button>

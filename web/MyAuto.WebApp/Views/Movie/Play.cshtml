@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "PlayView";
+}
+
+<h1>PlayMovie</h1>
+
+<div class="container">
+    <h1 class="text-center">@ViewBag.MovName</h1>
+    <h2 class="text-center">@ViewBag.Classify</h2>
+    <p class="text-center">作者：@ViewBag.Performer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创建时间：@ViewBag.MovieCreateTime</p>
+    <br />
+    <div style="text-align:center">
+        <video width="320" height="240"
+               src="../MovieFile/@ViewBag.FileName"
+               controls="controls" type="video/mp4">
+    </div>
+</div>

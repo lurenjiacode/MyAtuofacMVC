@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace MyAuto.Dao
 {
-    public class BlogArticleDao : IBlogArticle
+    public class BlogArticleDao : IBlogArticleDao
     {
 
-        string connString = ConfigurationManager.AppSettings["ConnectionString"];
+        string connString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
         private IDbConnection _conn;
 
         private IDbConnection Conn
@@ -30,24 +30,48 @@ namespace MyAuto.Dao
         {
             using (Conn)
             {
-                string query = "INSERT INTO WF_HjxtBatch(Bgmc,Bgzsbh,IsCopy,IsZip,CopyTime,UnderFolderName,ZipName,KjbgSpareA,KjbgSpareB,KjbgSpareC)VALUES(@bgmc,@bgzsbh,@isCopy,@isZip,@copyTime,@underFolderName,@zipName,@kjbgSpareA,@kjbgSpareB,@kjbgSpareC)";
+                string query = "INSERT INTO BlogArticle(Title,Keywords,Creator,BlogContent,BlogCreateTime)VALUES(@Title,@Keywords,@Creator,@BlogContent,@BlogCreateTime)";
                 return Conn.Execute(query, blogArticle);
             }
         }
 
         public bool Del(BlogArticle blogArticle)
         {
-            throw new NotImplementedException();
+            using (Conn)
+            {
+                string deletestr = "DELETE FROM BlogArticle WHERE BlogID = @BlogID";
+                return Conn.Execute(deletestr, blogArticle) > 0 ? true : false;
+            }
         }
-
-        public Task<BlogArticle> Get(BlogArticle blogArticle)
+        public IList<BlogArticle> GetList()
         {
-            throw new NotImplementedException();
+            using (Conn)
+            {
+                string query = "SELECT * FROM BlogArticle";
+                return Conn.Query<BlogArticle>(query).ToList();
+            }
+        }
+        public BlogArticle Get(BlogArticle blogArticle)
+        {
+            return this.Get(blogArticle.BlogID);
+        }
+        public BlogArticle Get(int blogID)
+        {
+            using (Conn)
+            {
+                string query = "SELECT * FROM BlogArticle WHERE BlogID = @BlogID ";
+                return Conn.Query<BlogArticle>(query, new { BlogID = blogID }).SingleOrDefault();
+            }
         }
 
         public bool Update(BlogArticle blogArticle)
         {
-            throw new NotImplementedException();
+            using (Conn)
+            {
+                string query = "UPDATE BlogArticle SET Title=@Title,Keywords=@Keywords,Creator=@Creator,BlogContent=@BlogContent,BlogCreateTime=@BlogCreateTime,";
+                return Conn.Execute(query, blogArticle) > 0 ? true : false;
+            }
         }
     }
+
 }
