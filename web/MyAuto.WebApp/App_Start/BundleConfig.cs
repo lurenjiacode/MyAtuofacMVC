@@ -25,6 +25,9 @@ namespace MyAuto.WebApp
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/layui").Include(
+                      "~/Content/layui/css/layui.css"));
         }
     }
 }

@@ -26,28 +26,35 @@ namespace MyAuto.Dao
             }
         }
 
-        public async Task<int> Add(User user)
-        {
-            using (Conn)
-            {
-                string query = "INSERT INTO WF_HjxtBatch(Bgmc,Bgzsbh,IsCopy,IsZip,CopyTime,UnderFolderName,ZipName,KjbgSpareA,KjbgSpareB,KjbgSpareC)VALUES(@bgmc,@bgzsbh,@isCopy,@isZip,@copyTime,@underFolderName,@zipName,@kjbgSpareA,@kjbgSpareB,@kjbgSpareC)";
-                return await new Task<int>(() => Conn.Execute(query, user));
-            }
-        }                                                                                                                                                                                     
-
-        public Task<bool> Del(User user)
+        public int Add(User user)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> Get(User user)
+        public bool Del(User user)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> Update(User user)
+        public User Get(User user)
         {
             throw new NotImplementedException();
         }
+
+        public User Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<User> GetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(User user)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

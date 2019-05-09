@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogArticleDao.cs" />
+    <Compile Include="MovieClassifyDao.cs" />
+    <Compile Include="MovieDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDao.cs" />
   </ItemGroup>
@@ -56,6 +58,10 @@
     <ProjectReference Include="..\MyAuto.IDao\MyAuto.IDao.csproj">
       <Project>{9e7e7f25-a7ee-4312-8e59-13158f9647f5}</Project>
       <Name>MyAuto.IDao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyAutofac.Interface\MyAutofac.Interface.csproj">
+      <Project>{A449BCCF-7C9A-4DA8-927C-19F8DE1714E6}</Project>
+      <Name>MyAutofac.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

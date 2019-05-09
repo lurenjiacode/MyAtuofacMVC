@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBlogArticle.cs" />
+    <Compile Include="IBlogArticleDao.cs" />
+    <Compile Include="IGenericDao.cs" />
+    <Compile Include="IMovieClassifyDao.cs" />
+    <Compile Include="IMovieDao.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,6 +51,10 @@
     <ProjectReference Include="..\MyAuto.Entity\MyAuto.Entity.csproj">
       <Project>{f13a1ed2-2563-4251-bca4-dcea11fe176f}</Project>
       <Name>MyAuto.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyAutofac.Interface\MyAutofac.Interface.csproj">
+      <Project>{A449BCCF-7C9A-4DA8-927C-19F8DE1714E6}</Project>
+      <Name>MyAutofac.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

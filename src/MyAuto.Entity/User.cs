@@ -11,7 +11,6 @@ namespace MyAuto.Entity
         public int UserID { get; set; }
         public string UserName { get; set; }
         public string UserPwd { get; set; }
-        public string UserRealName { get; set; }
         public int UserGender { get; set; }
         public DateTime UserBirthday { get; set; }
         public string UserAddress { get; set; }

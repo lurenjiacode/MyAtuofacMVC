@@ -40,7 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBlogArticleService.cs" />
+    <Compile Include="IMovieClassifyService.cs" />
+    <Compile Include="IMovieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyAuto.Entity\MyAuto.Entity.csproj">
+      <Project>{F13A1ED2-2563-4251-BCA4-DCEA11FE176F}</Project>
+      <Name>MyAuto.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyAutofac.Interface\MyAutofac.Interface.csproj">
+      <Project>{A449BCCF-7C9A-4DA8-927C-19F8DE1714E6}</Project>
+      <Name>MyAutofac.Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
