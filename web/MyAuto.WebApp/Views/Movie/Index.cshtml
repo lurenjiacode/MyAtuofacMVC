@@ -29,13 +29,13 @@
         {
             <tr>
                 <td>
-                    <a href="@Url.RouteUrl("Article", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.MovName)</a>
+                    <a href="@Url.RouteUrl("Play", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.MovName)</a>
                 </td>
                 <td>
-                    <a href="@Url.RouteUrl("Article", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.Performer)</a>
+                    <a href="@Url.RouteUrl("Play", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.Performer)</a>
                 </td>
                 <td>
-                    <a href="@Url.RouteUrl("Article", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.Classify)</a>
+                    <a href="@Url.RouteUrl("Play", new { pageindexa = item.MovID })" target="_blank">@Html.DisplayFor(modelItem => item.Classify)</a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.MovieCreateTime)
@@ -46,5 +46,5 @@
 </div>
 <div>
     每页 @Model.PageSize 条记录，共 @Model.TotalItemCount 条，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
-    @Html.PagedListPager(Model, page => Url.RouteUrl("Blog", new { pageindexa = page }))
+    @Html.PagedListPager(Model, page => Url.RouteUrl("Movie", new { pageindexa = page }))
 </div>

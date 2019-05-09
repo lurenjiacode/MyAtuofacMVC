@@ -19,8 +19,8 @@ namespace MyAuto.WebApp.Controllers
         }
 
         // GET: Mov
-        //[Route("Movie")]
-        //[Route("Movie/page{pageindexa}")]
+        [Route("Movie")]
+        [Route("Movie/page{pageindexa}")]
         public ActionResult Index(int pageindexa = 1)
         {
             string datatime = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
@@ -35,8 +35,22 @@ namespace MyAuto.WebApp.Controllers
             return View(moviePagedList);
         }
 
-        public ActionResult Play()
+
+        [Route("Movie/play_{pageindexa}")]
+        public ActionResult Play(int pageindexa = 1)
         {
+            var a = pageindexa;
+            //BlogArticle blogArticle = new BlogArticle();
+            string datatime = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+            ViewBag.Message = "Your application description page.";
+            ViewBag.Hellotime = datatime;
+            Movie movie = _movieService.Get(pageindexa);
+            ViewBag.MovID = movie.MovID;
+            ViewBag.MovName = movie.MovName;
+            ViewBag.Classify = movie.Classify;
+            ViewBag.Performer = movie.Performer;
+            ViewBag.FileName = movie.FileName;
+            ViewBag.MovieCreateTime = movie.MovieCreateTime;
             return View();
         }
     }

@@ -10,6 +10,7 @@ namespace ConsoleApp
 {
     public class DateAdd
     {
+        
         public void BlogArticleAdd()
         {
             BlogArticle blogArticle = new BlogArticle();
@@ -39,6 +40,9 @@ namespace ConsoleApp
                 blogArticleDao.Add(blogArticle2);
                 Console.WriteLine(i + " Over");
             }
+
+
+
             //var a = blogArticleDao.Del(blogArticle);
             //Console.WriteLine("删除：" + a);
         }
@@ -53,6 +57,22 @@ namespace ConsoleApp
             movie.FileName = "第一滴血.mp4";
             movie.ImgPath = "";
             movie.MovieCreateTime = DateTime.Now;
+
+            MovieDao movieDao = new MovieDao();
+
+            for (int i = 0; i < 100; i++)
+            {
+                Movie movie2 = new Movie();
+                movie2.MovName = "第一滴血"+i;
+                movie2.Classify = "1|2";
+                movie2.Performer = "史泰龙" + i;
+                movie2.CollectionNum = "2019";
+                movie2.FileName = "第一滴血.mp4";
+                movie2.ImgPath = "";
+                movie2.MovieCreateTime = DateTime.Now;
+                movieDao.Add(movie2);
+                Console.WriteLine(i + " Over");
+            }
         }
     }
 }
