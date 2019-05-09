@@ -17,7 +17,6 @@ namespace MyAuto.DataStructure.TreeData
         }
         public BinaryTree(string val)
         {
-            ///
             //TreeNode p = new TreeNode();
             //Head = p;
         }
