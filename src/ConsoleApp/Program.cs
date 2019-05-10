@@ -115,7 +115,7 @@ namespace ConsoleApp
 
             #region 提取a标签中的链接
             //CrawlerMethods.CreateInstance().LinkMesgForHtmlString();
-            CrawlerMethods.CreateInstance().PicLinkForHtmlString();
+            //CrawlerMethods.CreateInstance().PicLinkForHtmlString();
             #endregion
 
 

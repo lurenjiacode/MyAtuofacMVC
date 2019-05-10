@@ -12,6 +12,7 @@ namespace MyAuto.DataStructure.TreeData
         public string TreeNodeName { get; set; }
         public string TreeNodeDate { get; set; }
 
+        public TreeNode Parent { get; set; }
         public TreeNode LeftChild { get; set; }
         public TreeNode RightChild { get; set; }
 
