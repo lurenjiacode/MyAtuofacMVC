@@ -11,23 +11,99 @@ namespace MyAuto.WebCrawler
 {
     public class CrawlerInfo
     {
-
+        //需要添加超时设置
         public string  StartCrawler()
         {
             string a = "";
-            WebRequest request = WebRequest.Create("https://www.cnblogs.com/dreamroute/p/8484457.html");
+            //WebRequest request = WebRequest.Create("");
+            WebRequest request = WebRequest.Create("");
 
             WebResponse response = (WebResponse)request.GetResponse();
 
             Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream, Encoding.UTF8);
+            StreamReader reader = new StreamReader(dataStream, Encoding.Default);
 
             a += reader.ReadToEnd();
             
             return a;
         }
+        
+        public string StartCrawler(string urlstr)
+        {
+            string a = "";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlstr);
+            StreamReader reader = null;
+
+            try
+            {
+                WebResponse response = (WebResponse)request.GetResponse();
+                Stream dataStream = response.GetResponseStream();
+                reader = new StreamReader(dataStream, Encoding.Default);
+                a += reader.ReadToEnd();
+            }
+            catch (Exception ex)
+            {
+                a= "";
+            }
+            finally { }
+            
+
+            return a;
+        }
+        public string StartCrawler1(string urlstr)
+        {
+            string a = "";
+            WebRequest request = WebRequest.Create(urlstr);
+            WebResponse response = (WebResponse)request.GetResponse();
 
 
+            HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(urlstr);
+            myRequest.Method = "POST";
+            myRequest.ContentType = "text/xml";
+            myRequest.Accept = "*/*";
+            myRequest.Timeout = 2000;
+            myRequest.UserAgent = "Mozilla-Firefox-Spider(Wenanry)";
+            //myRequest.ContentLength = data.Length;
+            //这个在Post的时候，一定要加上，如果服务器返回错误，他还会继续再去请求，不会使用之前的错误数据，做返回数据
+            myRequest.ServicePoint.Expect100Continue = false;
+
+
+
+
+            Stream dataStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream, Encoding.Default);
+
+            a += reader.ReadToEnd();
+
+            return a;
+        }
+        public string StartCrawler2(string urlstr)
+        {
+            string a = "";
+            WebRequest request = WebRequest.Create(urlstr);
+            WebResponse response = (WebResponse)request.GetResponse();
+
+
+            HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(urlstr);
+            myRequest.Method = "POST";
+            myRequest.ContentType = "text/xml";
+            myRequest.Accept = "*/*";
+            myRequest.Timeout = 2000;
+            myRequest.UserAgent = "Mozilla-Firefox-Spider(Wenanry)";
+            //myRequest.ContentLength = data.Length;
+            //这个在Post的时候，一定要加上，如果服务器返回错误，他还会继续再去请求，不会使用之前的错误数据，做返回数据
+            myRequest.ServicePoint.Expect100Continue = false;
+
+
+
+
+            Stream dataStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream, Encoding.Default);
+
+            a += reader.ReadToEnd();
+
+            return a;
+        }
         private string RequestAction(RequestOptions options)
         {
             string result = string.Empty;
