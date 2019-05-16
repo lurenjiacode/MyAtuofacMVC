@@ -7,4 +7,5 @@
 编写设计模式和数据结构树节点学习
 
 20190512 实现爬虫下载图片 homeup
-20190514 companyup
+20190514 生成随机数列表 companyup
+20190516 ES companyup

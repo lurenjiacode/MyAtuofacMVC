@@ -76,29 +76,30 @@ namespace ConsoleApp
             //myGraphHandler.InitGraph();
             #endregion
 
-            #region 算法
+            #region 提取文字注释
             ////WordService wordService = new WordService();
-
             //////string a  = wordService.TiquWord("F:\\文档测试\\1.doc");
             ////wordService.Tiqu2("F:\\文档测试\\1.docx");
+            #endregion
+
+            #region 排序算法
+            //List<int> randomnums = new List<int>();
+            //try
+            //{
+            //    randomnums = NumData.RandomInt(100, 100, 50);
+            //    foreach (var randomnum in randomnums)
+            //    {
+            //        Console.WriteLine("NUM:" + randomnum);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    string error = ex.Message;
+            //}
+            //finally { }
             //Sort a = new Sort();
             //List<int> list = new List<int>();
-            //list.Add(7);
-            //list.Add(3);
-            //list.Add(9);
-            //list.Add(6);
-            //list.Add(2);
-            //list.Add(22);
-            //list.Add(4);
-            //list.Add(8);
-            ////list.Add(8);
-            ////list.Add(7);
-            ////list.Add(6);
-            ////list.Add(5);
-            ////list.Add(4);
-            ////list.Add(3);
-            ////list.Add(2);
-            ////list.Add(1);
+            //list = randomnums;
             //for (int i = 0; i < list.Count; i++)
             //{
             //    Console.Write(list[i] + "\t");
@@ -113,17 +114,13 @@ namespace ConsoleApp
             //}
             #endregion
 
-            #region 提取a标签中的链接
+            #region 爬取网页中的链接
             //CrawlerMethods.CreateInstance().LinkMesgForHtmlString();
             //CrawlerMethods.CreateInstance().PicLinkForHtmlString("");
 
-            CrawlerMain crawlerMain = new CrawlerMain();
-            crawlerMain.StartWeb();
-
+            //CrawlerMain crawlerMain = new CrawlerMain();
+            //crawlerMain.StartWeb();
             #endregion
-
-
-
 
             Console.WriteLine("END");
             Console.ReadKey();

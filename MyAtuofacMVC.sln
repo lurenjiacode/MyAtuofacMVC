@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAuto.WebCrawler", "src\My
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAuto.DesignPattern", "src\MyAuto.DesignPattern\MyAuto.DesignPattern.csproj", "{09DC0C2D-8A06-4C52-A683-7E7075539922}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAuto.Elasticsearch", "src\MyAuto.Elasticsearch\MyAuto.Elasticsearch.csproj", "{E6C82B32-98AA-4F86-A41A-19B4138516B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,6 +112,10 @@ Global
 		{09DC0C2D-8A06-4C52-A683-7E7075539922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09DC0C2D-8A06-4C52-A683-7E7075539922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09DC0C2D-8A06-4C52-A683-7E7075539922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C82B32-98AA-4F86-A41A-19B4138516B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C82B32-98AA-4F86-A41A-19B4138516B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C82B32-98AA-4F86-A41A-19B4138516B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C82B32-98AA-4F86-A41A-19B4138516B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +136,7 @@ Global
 		{AA5F2400-744D-4859-88EF-7F1AB5A57C38} = {1A7026B6-7C98-49A7-A8F6-DE9F2DD4A3E3}
 		{D56698A2-65EF-44CC-9996-A1E45227012B} = {1A7026B6-7C98-49A7-A8F6-DE9F2DD4A3E3}
 		{09DC0C2D-8A06-4C52-A683-7E7075539922} = {1A7026B6-7C98-49A7-A8F6-DE9F2DD4A3E3}
+		{E6C82B32-98AA-4F86-A41A-19B4138516B8} = {1A7026B6-7C98-49A7-A8F6-DE9F2DD4A3E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5748219F-1E95-494F-9D49-54C22523BC0E}
