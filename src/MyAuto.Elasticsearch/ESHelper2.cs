@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyAuto.Elasticsearch
 {
-    public class ESHelper
+    public class ESHelper2
     {
         public void Helper()
         {

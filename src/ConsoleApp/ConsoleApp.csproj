@@ -76,6 +76,14 @@
       <Project>{08724dc9-876a-4179-913d-8206ed1b8c51}</Project>
       <Name>MyAuto.DataStructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyAuto.DesignPattern\MyAuto.DesignPattern.csproj">
+      <Project>{09dc0c2d-8a06-4c52-a683-7e7075539922}</Project>
+      <Name>MyAuto.DesignPattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyAuto.Elasticsearch\MyAuto.Elasticsearch.csproj">
+      <Project>{e6c82b32-98aa-4f86-a41a-19b4138516b8}</Project>
+      <Name>MyAuto.Elasticsearch</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyAuto.Entity\MyAuto.Entity.csproj">
       <Project>{f13a1ed2-2563-4251-bca4-dcea11fe176f}</Project>
       <Name>MyAuto.Entity</Name>

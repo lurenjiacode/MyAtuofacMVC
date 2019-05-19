@@ -74,7 +74,7 @@ namespace MyAuto.WebCrawler
                     Console.WriteLine("num:" + "内容：" + aInterText + "\n链接：" + att.Value);
                     PicMode picMode = new PicMode();
                     picMode.Name = aInterText;
-                    picMode.Url = att.Value;
+                    picMode.Url = "" + att.Value;
                     urls.Add(picMode);
                 }
             }
@@ -206,6 +206,30 @@ namespace MyAuto.WebCrawler
             }
         }
 
+
+        public void GetText(string url)
+        {
+            CrawlerInfo crawlerInfo = new CrawlerInfo();
+            string texthtmlstr = crawlerInfo.StartCrawler(url);
+               HtmlDocument htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(texthtmlstr);
+            HtmlNode htmlNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='main']");
+
+            HtmlNode titlenode = htmlNode.ChildNodes[1];
+            string titlea = titlenode.InnerText;
+
+            var centernodes = htmlNode.SelectNodes("//div[@class='n_bd']");
+            string center = centernodes[0].InnerHtml.Replace("<br>", "\n").Remove(0, 89);
+
+            //WriteText(titlea, center, "");
+            Console.WriteLine("END Crawler !!!!!!!!!!!!!!!!!!!!!");
+        }
+
+        public void WriteText(string title,string contrnt,string path)
+        {
+            File.WriteAllText("F:\\1text\\"+ title + ".txt", contrnt, Encoding.UTF8);
+
+        }
     }
 
    

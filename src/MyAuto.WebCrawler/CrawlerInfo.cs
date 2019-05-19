@@ -27,7 +27,6 @@ namespace MyAuto.WebCrawler
             
             return a;
         }
-        
         public string StartCrawler(string urlstr)
         {
             string a = "";
@@ -50,7 +49,7 @@ namespace MyAuto.WebCrawler
 
             return a;
         }
-        public string StartCrawler1(string urlstr)
+        private string StartCrawler1(string urlstr)
         {
             string a = "";
             WebRequest request = WebRequest.Create(urlstr);
@@ -77,7 +76,7 @@ namespace MyAuto.WebCrawler
 
             return a;
         }
-        public string StartCrawler2(string urlstr)
+        private string StartCrawler2(string urlstr)
         {
             string a = "";
             WebRequest request = WebRequest.Create(urlstr);

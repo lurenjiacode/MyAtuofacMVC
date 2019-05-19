@@ -2,6 +2,7 @@
 using MyAuto.Dao;
 using MyAuto.DataStructure.GraphData;
 using MyAuto.DataStructure.SortAlgorithms;
+using MyAuto.Elasticsearch;
 using MyAuto.Entity;
 using MyAuto.ICacheService;
 using MyAuto.OfficeService;
@@ -115,11 +116,19 @@ namespace ConsoleApp
             #endregion
 
             #region 爬取网页中的链接
-            //CrawlerMethods.CreateInstance().LinkMesgForHtmlString();
-            //CrawlerMethods.CreateInstance().PicLinkForHtmlString("");
-
             //CrawlerMain crawlerMain = new CrawlerMain();
             //crawlerMain.StartWeb();
+
+            //CrawlerMethods crawlerMethods = new CrawlerMethods();
+            //crawlerMethods.GetText("");
+            #endregion
+
+
+            #region //ElasticSearch
+            //var eshelper = ElasticSearchHelper.Intance;
+
+
+
             #endregion
 
             Console.WriteLine("END");
