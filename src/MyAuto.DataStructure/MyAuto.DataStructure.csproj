@@ -49,6 +49,7 @@
     <Compile Include="SortAlgorithms\NumData.cs" />
     <Compile Include="SortAlgorithms\QuickSort.cs" />
     <Compile Include="SortAlgorithms\Sort.cs" />
+    <Compile Include="SortAlgorithms\StraightInsertionSort.cs" />
     <Compile Include="TreeData\BinaryTree.cs" />
     <Compile Include="TreeData\TreeNode.cs" />
   </ItemGroup>

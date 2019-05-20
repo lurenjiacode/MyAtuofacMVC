@@ -227,7 +227,10 @@ namespace MyAuto.WebCrawler
 
         public void WriteText(string title,string contrnt,string path)
         {
-            File.WriteAllText("F:\\1text\\"+ title + ".txt", contrnt, Encoding.UTF8);
+            string logAddress = title + ".txt";
+            StreamWriter fs = new StreamWriter(logAddress, false);
+            fs.WriteLine(contrnt);
+            fs.Close();
 
         }
     }
