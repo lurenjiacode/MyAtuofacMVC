@@ -40,5 +40,6 @@ namespace MyAuto.DataStructure.SortAlgorithms
                 list[j + 1] = key;              //最后找到合适的位置插入数组
             }
         }
+        
     }
 }

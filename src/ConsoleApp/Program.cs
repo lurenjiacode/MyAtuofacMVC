@@ -87,7 +87,7 @@ namespace ConsoleApp
             List<int> randomnums = new List<int>();
             try
             {
-                randomnums = NumData.RandomInt(3, 50, 20);
+                randomnums = NumData.RandomInt(3, 50, 10);
                 //foreach (var randomnum in randomnums)
                 //{
                 //    Console.WriteLine("NUM:" + randomnum);
@@ -111,7 +111,8 @@ namespace ConsoleApp
             //list.Sort();
             //sort.BubbleSortPrint(list);
             //sort.QuickSort2(list,0, list.Count-1);
-            sort.StraightInsertionSort(list);
+            //sort.StraightInsertionSort(list);
+            sort.InsertionSort(list);
             Console.WriteLine("Sort   Sort   Sort   Sort   Sort");
             for (int i = 0; i < list.Count; i++)
             {
