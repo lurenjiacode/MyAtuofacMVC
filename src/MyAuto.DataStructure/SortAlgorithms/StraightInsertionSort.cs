@@ -40,6 +40,25 @@ namespace MyAuto.DataStructure.SortAlgorithms
                 list[j + 1] = key;              //最后找到合适的位置插入数组
             }
         }
-        
+
+        public void InsertionSort(List<int> list)
+        {
+            for (int i = 1; i < list.Count; i++)
+            {
+                int j = 0;
+                j = i - 1;
+                int temp = list[i];
+                while (j >= 0 && temp < list[j])
+                {
+                    list[j + 1] = list[j];
+                    j = j - 1;
+                }
+                list[j + 1] = temp;
+            }
+        }
+        public void InsertSort(List<int> list)
+        {
+            
+        }
     }
 }
