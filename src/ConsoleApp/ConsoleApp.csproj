@@ -68,6 +68,10 @@
       <Project>{076c5a99-078e-40c8-a48e-4a77cd1960b3}</Project>
       <Name>MyAuto.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyAuto.CSharpCore\MyAuto.CSharpCore.csproj">
+      <Project>{de15543e-5ac4-4618-be02-840d9164dd1e}</Project>
+      <Name>MyAuto.CSharpCore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyAuto.Dao\MyAuto.Dao.csproj">
       <Project>{4ac6b49e-53ea-4723-a783-e7fbb34629c3}</Project>
       <Name>MyAuto.Dao</Name>
