@@ -58,7 +58,22 @@ namespace MyAuto.DataStructure.SortAlgorithms
         }
         public void InsertSort(List<int> list)
         {
-            
+
+        }
+        public void ShellSort(List<int> list)
+        {
+            int num = list.Count;
+            for (int gap = num / 2; gap > 0; gap /= 2)
+            {
+                for (int i = gap; i < num; i += 1)
+                {
+                    int temp = list[i];
+                    int j;
+                    for (j = i; j >= gap && list[j - gap] > temp; j -= gap)
+                        list[j] = list[j - gap];
+                    list[j] = temp;
+                }
+            }
         }
     }
 }
