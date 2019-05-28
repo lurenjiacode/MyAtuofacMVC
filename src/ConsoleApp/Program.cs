@@ -124,7 +124,7 @@ namespace ConsoleApp
             ////sort.BubbleSortPrint(list);
             ////sort.QuickSort2(list,0, list.Count-1);
             ////sort.StraightInsertionSort(list);
-            //sort.ShellSort(list);
+            //sort.InsertSort(list);
             //Console.WriteLine("Sort   Sort   Sort   Sort   Sort");
             //for (int i = 0; i < list.Count; i++)
             //{
@@ -157,7 +157,14 @@ namespace ConsoleApp
 
             #endregion
 
-
+            #region hash
+            //string str = "abc";
+            //string str2 = "abc";
+            //int Lower31BitMask = 0x7FFFFFFF;
+            //int hashcode = 0;
+            //hashcode = str.GetHashCode() & Lower31BitMask;
+            //Console.WriteLine("str的hashcode:" + hashcode);
+            #endregion
 
 
 
