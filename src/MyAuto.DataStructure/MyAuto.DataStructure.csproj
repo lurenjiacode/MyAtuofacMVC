@@ -48,7 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortAlgorithms\NumData.cs" />
     <Compile Include="SortAlgorithms\QuickSort.cs" />
-    <Compile Include="SortAlgorithms\Sort.cs" />
+    <Compile Include="SortAlgorithms\ShellSort.cs" />
+    <Compile Include="SortAlgorithms\BubbleSort.cs" />
     <Compile Include="SortAlgorithms\StraightInsertionSort.cs" />
     <Compile Include="TreeData\BinaryTree.cs" />
     <Compile Include="TreeData\TreeNode.cs" />
