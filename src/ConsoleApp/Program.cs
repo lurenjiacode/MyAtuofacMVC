@@ -149,7 +149,7 @@ namespace ConsoleApp
 
             #endregion
 
-            #region hash
+            #region //hash
             //string str = "abc";
             //string str2 = "abc";
             //int Lower31BitMask = 0x7FFFFFFF;
