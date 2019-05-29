@@ -104,6 +104,10 @@
       <Project>{2a85442b-ebce-4a55-8df5-74d9051ba296}</Project>
       <Name>MyAuto.IService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyAuto.LuceneNet\MyAuto.LuceneNet.csproj">
+      <Project>{4317a14a-facd-4dd4-bcb6-6fa96fd0d3f1}</Project>
+      <Name>MyAuto.LuceneNet</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyAuto.OfficeService\MyAuto.OfficeService.csproj">
       <Project>{aa5f2400-744d-4859-88ef-7f1ab5a57c38}</Project>
       <Name>MyAuto.OfficeService</Name>

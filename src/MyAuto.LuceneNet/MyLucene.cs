@@ -32,7 +32,7 @@ namespace MyAuto.LuceneNet
             IndexWriter writer = null;
             Analyzer analyzer = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30);
             //Analyzer pganalyzer = new PanGuAnalyzer();
-            Lucene.Net.Store.Directory dir = FSDirectory.Open(new System.IO.DirectoryInfo("F:\\doc"));
+            Lucene.Net.Store.Directory dir = FSDirectory.Open(new System.IO.DirectoryInfo("F:\\lucenedata"));
             try
             {
                 ////IndexReader:对索引进行读取的类。
@@ -46,7 +46,7 @@ namespace MyAuto.LuceneNet
                     string path = "F:\\doc\\红楼梦.txt";
                     string text = System.IO.File.ReadAllText(path, Encoding.Default);
                     //Field.Store.YES:表示是否存储原值。只有当Field.Store.YES在后面才能用doc.Get("number")取出值来.Field.Index. NOT_ANALYZED:不进行分词保存
-                    doc.Add(new Field("number", 1.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+                    doc.Add(new Field("number", 5.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
                     // Lucene.Net.Documents.Field.TermVector.WITH_POSITIONS_OFFSETS:不仅保存分词还保存分词的距离。
                     doc.Add(new Field("body", text, Field.Store.YES, Field.Index.ANALYZED, Field.TermVector.WITH_POSITIONS_OFFSETS));
                     writer.AddDocument(doc);

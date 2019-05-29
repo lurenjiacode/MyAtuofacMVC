@@ -6,6 +6,7 @@ using MyAuto.DataStructure.SortAlgorithms;
 using MyAuto.Elasticsearch;
 using MyAuto.Entity;
 using MyAuto.ICacheService;
+using MyAuto.LuceneNet;
 using MyAuto.OfficeService;
 using MyAuto.RabbitMQModule;
 using MyAuto.WebCrawler;
@@ -166,7 +167,13 @@ namespace ConsoleApp
             //Console.WriteLine("str的hashcode:" + hashcode);
             #endregion
 
+            #region  lucene
+            MyLucene myLucene = new MyLucene();
+            myLucene.myindexer();
+            //myLucene.mychaxun();
 
+
+            #endregion
 
 
             Console.WriteLine("END");
