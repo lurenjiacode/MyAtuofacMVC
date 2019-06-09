@@ -9,13 +9,12 @@ namespace MyAuto.WebCrawler
     public class CrawlerMain
     {
         //
-        private readonly string MAINURL = "";
+        private readonly string MAINURL = "http://www.369hm.com/";
         CrawlerInfo crawlerInfo = new CrawlerInfo();
         public void StartWeb()
         {
-            
             #region 生成以及url
-            var urls = CreateOneLevelUrls(2,500);
+            var urls = CreateOneLevelUrls(0,100);
             foreach (var url in urls)
             {
                 string html= crawlerInfo.StartCrawler(url);
@@ -43,7 +42,6 @@ namespace MyAuto.WebCrawler
 
             }
             #endregion
-
         }
 
 

@@ -134,15 +134,7 @@ namespace ConsoleApp
             //}
             #endregion
 
-            //int num = 9;
-            //num = num / 2;
-            //int num2 = 9;
-            //num2 /= 2;
-            ////Console.WriteLine("num / 2 ={0}", num / 2);
-            //Console.WriteLine("num:{0},num2:{1}", num, num2);
-
-
-            #region 爬取网页中的链接
+            #region //爬取网页中的链接
             //CrawlerMain crawlerMain = new CrawlerMain();
             //crawlerMain.StartWeb();
 
@@ -167,9 +159,9 @@ namespace ConsoleApp
             //Console.WriteLine("str的hashcode:" + hashcode);
             #endregion
 
-            #region  lucene
-            MyLucene myLucene = new MyLucene();
-            myLucene.myindexer();
+            #region  //lucene
+            //MyLucene myLucene = new MyLucene();
+            //myLucene.myindexer();
             //myLucene.mychaxun();
 
 
