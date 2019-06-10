@@ -97,52 +97,44 @@ namespace ConsoleApp
             #endregion
 
             #region 排序算法
-            //List<int> randomnums = new List<int>();
-            //try
-            //{
-            //    randomnums = NumData.RandomInt(3, 50, 10);
-            //    //foreach (var randomnum in randomnums)
-            //    //{
-            //    //    Console.WriteLine("NUM:" + randomnum);
-            //    //}
-            //}
-            //catch (Exception ex)
-            //{
-            //    string error = ex.Message;
-            //}
-            //finally { }
-            //Sort sort = new Sort();
-            //List<int> list = new List<int>();
-            //list = randomnums;
-            //Console.WriteLine("输入数组：");
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    Console.Write(list[i] + "\t");
-            //}
-            //Console.WriteLine("数组输入结束");
-            //Console.WriteLine("开始排序：");
-            ////list.Sort();
-            ////sort.BubbleSortPrint(list);
-            ////sort.QuickSort2(list,0, list.Count-1);
-            ////sort.StraightInsertionSort(list);
-            //sort.InsertSort(list);
-            //Console.WriteLine("Sort   Sort   Sort   Sort   Sort");
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    //Console.WriteLine(list[i]);
-            //    Console.Write(list[i] + "\t");
-            //}
+            List<int> randomnums = new List<int>();
+            try
+            {
+                randomnums = NumData.RandomInt(3, 50, 10);
+                //foreach (var randomnum in randomnums)
+                //{
+                //    Console.WriteLine("NUM:" + randomnum);
+                //}
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+            }
+            finally { }
+            Sort sort = new Sort();
+            List<int> list = new List<int>();
+            list = randomnums;
+            Console.WriteLine("输入数组：");
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.Write(list[i] + "\t");
+            }
+            Console.WriteLine("数组输入结束");
+            Console.WriteLine("开始排序：");
+            //list.Sort();
+            //sort.BubbleSortPrint(list);
+            //sort.QuickSort2(list,0, list.Count-1);
+            //sort.StraightInsertionSort(list);
+            sort.HeapSort(list); 
+            Console.WriteLine("Sort   Sort   Sort   Sort   Sort");
+            for (int i = 0; i < list.Count; i++)
+            {
+                //Console.WriteLine(list[i]);
+                Console.Write(list[i] + "\t");
+            }
             #endregion
 
-            //int num = 9;
-            //num = num / 2;
-            //int num2 = 9;
-            //num2 /= 2;
-            ////Console.WriteLine("num / 2 ={0}", num / 2);
-            //Console.WriteLine("num:{0},num2:{1}", num, num2);
-
-
-            #region 爬取网页中的链接
+            #region //爬取网页中的链接
             //CrawlerMain crawlerMain = new CrawlerMain();
             //crawlerMain.StartWeb();
 
@@ -167,42 +159,13 @@ namespace ConsoleApp
             //Console.WriteLine("str的hashcode:" + hashcode);
             #endregion
 
-            #region  lucene
+            #region  //lucene
             //MyLucene myLucene = new MyLucene();
             //myLucene.myindexer();
             //myLucene.mychaxun();
-            //myLucene.myfenduan();
+
+
             #endregion
-
-            string pwd = String.Empty;
-            //`~!@#$%^&*()_+-=[]{}\|;:'"<,>.?/
-            pwd = "123qweASD#";
-            pwd = "11111111";
-            pwd = "asdasdASDF12312";
-            pwd = "12312321!@@#";
-            pwd = "aaaaaaaaa";
-            pwd = "asdasdaASS!@#$^&**((^^%^$^%%*(";
-            pwd = "asdasdaASS1231231231";
-            pwd = "ASS1231231231!@#$$";
-            pwd = "ASS1231231231";
-            pwd = "Ming@075017";
-            bool a = Regex.IsMatch(pwd, @"(?=.*[0-9]).{8,16}");
-            bool b = Regex.IsMatch(pwd, @"(?=.*[a-zA-Z]).{8,16}");
-            bool b1 = Regex.IsMatch(pwd, @"(?=.*[a-z]).{8,16}");
-            bool b2= Regex.IsMatch(pwd, @"(?=.*[A-Z]).{8,16}");
-
-
-            bool c = Regex.IsMatch(pwd, @"(?=([\x21-\x7e]+)[^a-zA-Z0-9]).{8,16}");
-            bool d = Regex.IsMatch(pwd, @"(?=.*[0-9])(?=.*[a-zA-Z])(?=([\x21-\x7e]+)[^a-zA-Z0-9]).{8,16}");
-
-            Console.WriteLine("{0},{1},{2},{3}",a.ToString(),b.ToString(), c.ToString(), d.ToString());
-
-            Console.WriteLine("{0},{1},{2}", b.ToString(), b1.ToString(), b2.ToString());
-
-            // a b1 b2 c
-            bool eee = !((a && b1 && b2) || (a && b1 && c) || (a && b2 && c) || (b1 && b2 && c));
-            Console.WriteLine("{0}", eee.ToString());
-
 
 
             Console.WriteLine("END");
