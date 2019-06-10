@@ -168,12 +168,41 @@ namespace ConsoleApp
             #endregion
 
             #region  lucene
-            MyLucene myLucene = new MyLucene();
-            myLucene.myindexer();
+            //MyLucene myLucene = new MyLucene();
+            //myLucene.myindexer();
             //myLucene.mychaxun();
-
-
+            //myLucene.myfenduan();
             #endregion
+
+            string pwd = String.Empty;
+            //`~!@#$%^&*()_+-=[]{}\|;:'"<,>.?/
+            pwd = "123qweASD#";
+            pwd = "11111111";
+            pwd = "asdasdASDF12312";
+            pwd = "12312321!@@#";
+            pwd = "aaaaaaaaa";
+            pwd = "asdasdaASS!@#$^&**((^^%^$^%%*(";
+            pwd = "asdasdaASS1231231231";
+            pwd = "ASS1231231231!@#$$";
+            pwd = "ASS1231231231";
+            pwd = "Ming@075017";
+            bool a = Regex.IsMatch(pwd, @"(?=.*[0-9]).{8,16}");
+            bool b = Regex.IsMatch(pwd, @"(?=.*[a-zA-Z]).{8,16}");
+            bool b1 = Regex.IsMatch(pwd, @"(?=.*[a-z]).{8,16}");
+            bool b2= Regex.IsMatch(pwd, @"(?=.*[A-Z]).{8,16}");
+
+
+            bool c = Regex.IsMatch(pwd, @"(?=([\x21-\x7e]+)[^a-zA-Z0-9]).{8,16}");
+            bool d = Regex.IsMatch(pwd, @"(?=.*[0-9])(?=.*[a-zA-Z])(?=([\x21-\x7e]+)[^a-zA-Z0-9]).{8,16}");
+
+            Console.WriteLine("{0},{1},{2},{3}",a.ToString(),b.ToString(), c.ToString(), d.ToString());
+
+            Console.WriteLine("{0},{1},{2}", b.ToString(), b1.ToString(), b2.ToString());
+
+            // a b1 b2 c
+            bool eee = !((a && b1 && b2) || (a && b1 && c) || (a && b2 && c) || (b1 && b2 && c));
+            Console.WriteLine("{0}", eee.ToString());
+
 
 
             Console.WriteLine("END");

@@ -8,6 +8,7 @@ using Lucene.Net.Store;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,7 +81,7 @@ namespace MyAuto.LuceneNet
             Stopwatch sw = new Stopwatch();
             sw.Start();
             //索引库目录
-            Lucene.Net.Store.Directory dir = FSDirectory.Open(new System.IO.DirectoryInfo("F:\\doc"), new NoLockFactory());
+            Lucene.Net.Store.Directory dir = FSDirectory.Open(new System.IO.DirectoryInfo("F:\\lucenedata"), new NoLockFactory());
             IndexReader reader = IndexReader.Open(dir, true);
             IndexSearcher search = null;
             try
@@ -98,12 +99,8 @@ namespace MyAuto.LuceneNet
                 {
                     int docId = docs[i].Doc;
                     Document doc = search.Doc(docId);
-                    //this.listBox.Items.Add(doc.Get("number") + "\r\n");
-                    //this.listBox.Items.Add(doc.Get("body") + "\r\n");
-                    //this.listBox.Items.Add("------------------------\r\n");
                     string a = doc.Get("number") + "\r\n";
                     string b = doc.Get("body") + "\r\n";
-
                 }
             }
             catch (Exception ex)
@@ -119,6 +116,38 @@ namespace MyAuto.LuceneNet
             }
             //this.label.Text = "搜索用时:";
             //this.timeBox.Text = sw.ElapsedMilliseconds + "毫秒";
+
+        }
+
+
+        public void myfenduan()
+        {
+            string path = "F:\\doc\\红楼梦.txt";
+            try
+            {   // Open the text file using a stream reader.
+                using (StreamReader sr = new StreamReader(path, Encoding.Default))
+                {
+                    // Read the stream to a string, and write the string to the console.
+                    string line = sr.ReadToEnd();
+
+                    string[] aa = line.Split(new string[1] { "\r\n\r\n\r\n\r\n" }, StringSplitOptions.None);
+                    for (int i = 0; i < aa.Length; i++)
+                    {
+                        string name = "第" + (i + 1).ToString() + "回";
+                        string LogAddress = "F:\\doc\\1\\" + name + ".txt";
+                        StreamWriter fs = new StreamWriter(LogAddress, true);
+                        fs.WriteLine(aa[i]);
+                        fs.Close();
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+
 
         }
 
