@@ -18,6 +18,7 @@ namespace MyAuto.WebCrawler
 
    public class CrawlerMethods
     {
+        private readonly string MAINURL = "http://www.369hm.com";
         readonly CrawlerInfo crawlerInfo = new CrawlerInfo();
 
         WebClient wc = new WebClient();
@@ -71,11 +72,11 @@ namespace MyAuto.WebCrawler
                     string aInterText = href.InnerText;
                     string[] namelist = aInterText.Split('[');
                     string name = namelist[0].ToString();
-                    Console.WriteLine("num:" + "内容：" + aInterText + "\n链接：" + att.Value);
                     PicMode picMode = new PicMode();
                     picMode.Name = aInterText;
-                    picMode.Url = "" + att.Value;
+                    picMode.Url = MAINURL + att.Value;
                     urls.Add(picMode);
+                    Console.WriteLine("num:" + "内容：" + aInterText + "\n链接：" + picMode.Url);
                 }
             }
             return urls;

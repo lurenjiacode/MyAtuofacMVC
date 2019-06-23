@@ -376,7 +376,7 @@ namespace Lucene.Net.Index
 			System.String segmentFileName = GetNextSegmentFileName();
 			
 			// Always advance the generation on write:
-			                                                                                                                                                                                    if (generation == - 1)
+			if (generation == - 1)
 			{
 				generation = 1;
 			}

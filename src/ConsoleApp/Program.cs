@@ -135,8 +135,8 @@ namespace ConsoleApp
             #endregion
 
             #region //爬取网页中的链接
-            //CrawlerMain crawlerMain = new CrawlerMain();
-            //crawlerMain.StartWeb();
+            CrawlerMain crawlerMain = new CrawlerMain();
+            crawlerMain.StartWeb();
 
             //CrawlerMethods crawlerMethods = new CrawlerMethods();
             //crawlerMethods.GetText("");
